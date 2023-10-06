@@ -4,6 +4,7 @@ import css from './App.module.css';
 // import NavBarSimple from './components/NavBarSimple';
 import EventsFunctional from './components/EventsFunctional';
 import EventsClass from './components/EventsClass';
+import NavBarForm from './components/NavBarForm';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       {/* <Sidebar /> */}
       {/* <NavBarSimple /> */}
       {/* <StatefulGreeting greeting="I'm a stateful Class component!"/> */}
-      {<EventsFunctional />}
-      {<EventsClass />}
+      {/* {<EventsFunctional />} */}
+      {/* {<EventsClass />} */}
+      {<NavBarForm />}
     </div>
   );
 }
