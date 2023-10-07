@@ -11,26 +11,20 @@ export class NavBarForm extends Component {
         }
     }
 
-    handleLogin = () => {
-        this.setState({
-          isLoggedIn: true,
-        });
-      };
-    
-      handleSubmit = () => {
-        this.setState({
-          isLoggedIn: false,
-        });
-      };
+    handleButtonClick = () => {
+        this.setState((prevState) => ({
+            isLoggedIn: prevState.isLoggedIn ? false: true
+        }),  () => console.log(this.state.isLoggedIn))
+    }
 
 
     render() {
         return (
         <div className = {css.NavBar}>
+            <h1>My Gallery</h1>
             <NavBarChild 
             isLoggedIn={this.state.isLoggedIn}
-            handleLogin={this.handleLogin}
-            handleSubmit={this.handleSubmit}/>
+            handleButtonClick={this.handleButtonClick}/>
         </div>
         )
     }

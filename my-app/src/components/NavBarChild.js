@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
-import css from "./css/NavBarForm.module.css";
 
 function NavBarChild(props) {
     return (
-        <div>
-          {props.isLoggedIn ? (
-            <div>
-                <form>
-                    <label for="username">Username: </label>
-                    <input type="text" id="username" placeholder='Username'></input>
-                    <label for="password">Password: </label>
-                    <input type="text" id="password" placeholder='Password'></input>
-                </form>
-                <button onClick={props.handleSubmit}>Submit</button>
-            </div>
-          ) : (
-            <div>
-                <h1>My Gallery</h1>
-                <button onClick={props.handleLogin}>Login</button>
-            </div>
-          )}
-        </div>
-      );
-    }
+      props.isLoggedIn ?
+        <button onClick={props.handleButtonClick}>Login</button>
+        :
+        <form>
+            <label htmlFor = "username">Username: </label>
+            <input placeholder="username" id="username"/>
+        
+            <label htmlFor = "password">Password: </label>
+            <input placeholder="password" id="password"/>
+            <button  onClick={props.handleButtonClick}>Submit</button>
+        </form>
+    )
+}
+
 
 
 export default NavBarChild
